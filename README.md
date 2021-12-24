@@ -14,14 +14,17 @@ There are a few endpoints that can be hit to observe the synchronization of the 
 
 1) `localhost:3000/blockchain` : to observe the entire bloackchain including the blocks mined, pending transactions, and nodes in the network. 
 2) `localhost:3000/transaction/broadcast` : to create a new transaction and broadcast it to the entire network. 
-   This endpoint requires the transaction details to be contained inside the post body in JSON format as 
-   `
+   This endpoint requires the transaction details to be contained inside the post body in JSON format as `
     {
     "amount": 40,
     "sender": "HSDUSHDUIHIUH",
     "recipient": "DGFYUDSGYUFG"
     }
    `
+3) `localhost:3000/register-and-broadcast-node` : to register a new node and broadcast it to the entire network. This new node is interfaced with every node in the blockchain and in return every node is also interfaced with the new node. The POST body should contain the address of the new node in JSON format as `{
+    "newNodeUrl": "http://localhost:3002"
+}`
+4) 
 
 
 ## References 
